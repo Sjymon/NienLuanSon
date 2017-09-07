@@ -1,0 +1,29 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+<section>	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<section id="student">
+				{% for student in student_list %}
+				<div class="col-md-3">
+				<article>
+					<header>
+					</header>
+					<a href="#">{{ student.first_name }}</a>
+					<p> {{ student.last_name }}</p>
+					<p> {{ student.student_id }}</p>
+					<p> {{ student.email }}</p>
+					<p> {{ student.phone }}</p>
+					<p> {{ student.address_city }}</p>
+					<p> {{ student.slug }}</p>
+				</article>
+				</div>
+				{% endfor %}
+				</section>
+			</div>	
+		</div>
+	</div>	
+</section>
+{% endblock content %}

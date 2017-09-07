@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- Static files -->
+	{% load static %}
+    <!-- Core Bootstrap 3 -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Font awesome -->
+    <link rel="stylesheet" type="text/css" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+    <!-- Custom css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	<!-- end static files -->
+    <title></title>
+    {% block css %}{% endblock css %}
+</head>
+
+<body>
+<!-- <header>     -->
+<nav class="header" class="navbar navbar-fixed-top">
+    <div id="header-container" class="container navbar-container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'images/logo.png' %}" alt="Brand">
+            </a>
+        </div>
+
+        <form class="navbar-form navbar-right">
+            <div id="imaginary_container">
+                <div class="input-group stylish-input-group">
+                    <input type="text" class="form-control" placeholder="Search ...">
+                    <span class="input-group-addon">
+                        <button type="button">
+                            <span class="glyphicon glyphicon-search">
+                            </span>
+                        </button>
+                    </span>        
+                </div>
+            </div>
+        </form>
+    </div>
+</nav>
+<!-- </header> -->
+{% block content %}{% endblock content %}
+<div class="container">
+    <hr />
+        <div class="text-center center-block">
+            <p class="txt-railway">- Copyright &copy; 2017 -</p>
+            <br />
+                <a href="https://www.fb.com/sjymon"><i class="fa fa-facebook-square fa-3x social"></i></a>
+                <a href="https://twitter.com/boychip95"><i class="fa fa-twitter-square fa-3x social"></i></a>
+                <a href="#"><i class="fa fa-google-plus-square fa-3x social"></i></a>
+                <a href="mailto:ntrongphuong.it@gmail.com"><i class="fa fa-envelope-square fa-3x social"></i></a>
+        </div>
+    <hr />
+</div>
+
+    <!-- static javascript -->
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+    {% block js %}{% endblock js %}
+	<!-- end static javascript -->
+</body>
+</html>
